@@ -179,7 +179,7 @@ class GPT(nn.Module):
                 block.attn.bias = block.attn.bias[:,:,:block_size,:block_size]
 
     @classmethod
-    def from_pretrained(cls, model_type, override_arg=None):
+    def from_pretrained(cls, model_type, override_args=None):
         # ability to load in pretrained models from hundl (it's all pretty much just copy-pasted)
         assert model_type in  {'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'}
 
